@@ -7,7 +7,7 @@ CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
 ```
 Score: 5.3 (Medium).
 
-Affected version: 7.3.0 built from commit `9cf8ddd5da1673c5774b847af8dca9dcb5fb1be6`
+Affected version: =< 7.3.1
 
 ## Description
 Exposed global Server-Sent Events stream at `/stream` without requiring authentication.
