@@ -25,3 +25,11 @@ The optional `strmid` parameter was not required for reproduction and does not p
 ## Demo
 
 https://github.com/user-attachments/assets/f9f7d11f-0521-46d3-ad38-796dfe2b55b5
+
+## Disclaimer
+
+This vulnerability was discovered by [YonLiud](https://github.com/YonLiud) and is provided “as is” for security research, education, and authorized testing purposes only.
+The vulnerability was reported to the DbGate maintainers on September 20, 2026. No response or acknowledgment was received from the maintainers as of the date of publication.
+This project must not be used for malicious purposes or against systems, networks, accounts, or data without explicit authorization from the owner. Any testing should be performed only in an isolated laboratory environment or within an explicitly authorized scope.
+The author makes no warranties regarding this project and accepts no responsibility for damage, data loss, service disruption, unauthorized access, legal violations, or any other consequences resulting from its use, misuse, modification, or redistribution.
+By downloading, executing, or using this project, you acknowledge that you are solely responsible for your actions and for complying with all applicable laws and regulations.
