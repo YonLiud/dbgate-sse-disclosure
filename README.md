@@ -7,7 +7,7 @@ CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
 ```
 Score: 5.3 (Medium).
 
-Affected version: =< 7.3.1
+Affected version: <= 7.3.2 (7.3.2 verified)
 
 ## Description
 Exposed global Server-Sent Events stream at `/stream` without requiring authentication.
@@ -21,6 +21,17 @@ An unauthenticated requester can connect to the endpoint and receive events gene
 
 The stream did not return query result rows in the tested case, but it still crossed the expected session boundary and disclosed SQL and execution metadata.
 The optional `strmid` parameter was not required for reproduction and does not provide authorization or isolation.
+
+## Validation
+
+Verified on 2026-10-15 against the official `dbgate/dbgate:7.3.2` Docker image
+(`sha256:fc68e7c433963bff17af7372ce87f4b94873551a1c1b124220c8c04a22a80311`).
+
+An unauthenticated `GET /stream` returned `200 OK` with `Content-Type:
+text/event-stream`. While that stream was open, activity from a separate authenticated
+account delivered an event containing that account's session ID and SQL text. This
+confirms that the endpoint remains unauthenticated and exposes cross-user session
+metadata in 7.3.2.
 
 ## Demo
 
